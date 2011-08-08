@@ -22,6 +22,10 @@ Add the following line to your `config/routes.rb`:
 
     resources :changes, :controller => 'paper_trail_manager/changes'
 
+Add the PaperTrailManager stylesheet to your layout:
+
+    <%= stylesheet_link_tag 'paper_trail_manager' %>
+
 Restart the server and go to the `/changes` URI to browse, subscribe, view and revert your changes. The top-level URL will look something like this:
 
     http://localhost:3000/changes

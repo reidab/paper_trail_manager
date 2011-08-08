@@ -18,6 +18,10 @@ require 'paper_trail'
 #   PaperTrailManager.whodunnit_name_method = :nicename   # defaults to :name
 #
 class PaperTrailManager < Rails::Engine
+  initializer "Serve static assets from /public" do |app|
+    app.middleware.use ::ActionDispatch::Static, "#{root}/public"
+  end
+
   @@whodunnit_name_method = :name
   cattr_accessor :whodunnit_class, :whodunnit_name_method
 
