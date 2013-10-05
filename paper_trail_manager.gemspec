@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Igal Koshevoy"]
   s.date = "2012-08-13"
-  s.description = "A user interface for `paper_trail` versioning data in Ruby on Rails 3 applications."
+  s.description = "A user interface for `paper_trail` versioning data in Ruby on Rails 3 & 4 applications."
   s.email = "igal@pragmaticraft.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -359,8 +359,8 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<rake>, [">= 0"])
-      s.add_runtime_dependency(%q<rails>, ["~> 3.0"])
-      s.add_runtime_dependency(%q<paper_trail>, ["~> 2.0"])
+      s.add_runtime_dependency(%q<rails>, ["> 3.0"])
+      s.add_runtime_dependency(%q<paper_trail>, ["> 2.0"])
       s.add_runtime_dependency(%q<will_paginate>, ["~> 3.0.pre2"])
       s.add_development_dependency(%q<rdoc>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.8.4"])
